@@ -1,0 +1,11 @@
+{
+  "name": "lakulab-localhost",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Prototipe frontend lokal LakuLab",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  }
+}

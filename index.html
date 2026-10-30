@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LakuLab membantu menguji minat calon pembeli dan menghitung skenario produksi pertama.">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>LakuLab - Uji ide sebelum produksi</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/vendor/gsap.min.js"></script>
+  <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="assets/vendor/lucide.min.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+<div id="lakulab-web-design">
+  
+  <div class="ll-shell">
+    <aside class="ll-sidebar" aria-label="Menu utama">
+      <div class="ll-sidebar-top"><img class="ll-brand" src="assets/logo-lakulab.png" alt="LakuLab"><button type="button" class="ll-mobile-menu cursor-interaction" aria-label="Buka menu" aria-expanded="false"><i data-lucide="menu" aria-hidden="true"></i></button></div>
+      <div class="ll-nav-wrap">
+        <div class="ll-nav-label">RUANG KERJAMU</div>
+        <nav class="ll-nav">
+          <button type="button" data-page="beranda" aria-current="page" class="cursor-interaction"><i data-lucide="house" aria-hidden="true"></i>Beranda</button>
+          <button type="button" data-page="dashboard" class="cursor-interaction"><i data-lucide="layout-dashboard" aria-hidden="true"></i>Dashboard</button>
+          <button type="button" data-page="kampanye" class="cursor-interaction"><i data-lucide="flask-conical" aria-hidden="true"></i>Kampanye</button>
+          <button type="button" data-page="pembeli" class="cursor-interaction"><i data-lucide="users-round" aria-hidden="true"></i>Calon pembeli</button>
+          <button type="button" data-page="simulasi" class="cursor-interaction"><i data-lucide="sliders-horizontal" aria-hidden="true"></i>Vendor & simulasi</button>
+          <button type="button" data-page="laporan" class="cursor-interaction"><i data-lucide="file-chart-column" aria-hidden="true"></i>Laporan</button>
+        </nav>
+        <div class="ll-nav-sep"></div>
+        <button type="button" class="ll-link cursor-interaction" data-go="kampanye" style="padding-left:13px"><i data-lucide="plus" aria-hidden="true"></i>Eksperimen baru</button>
+      </div>
+      <div class="ll-sidebar-bottom"><div class="ll-small-star"><i data-lucide="sparkles" aria-hidden="true"></i></div><strong>Ide kecil, langkah nyata.</strong><p>Kasih idemu kesempatan<br>untuk diuji.</p><button type="button" class="ll-link cursor-interaction" data-go="kampanye">Mulai sekarang<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div>
+    </aside>
+    <main class="ll-main">
+      <header class="ll-topbar"><div class="ll-breadcrumb">LakuLab<span>/</span><b id="ll-current-label">Beranda</b></div><div class="ll-top-right"><span class="ll-demo-label"><span class="ll-demo-dot"></span>Mode demo</span><span class="ll-avatar">LL</span></div></header>
+      <div class="ll-content">
+        <section data-view="beranda" aria-label="Beranda LakuLab">
+          <div class="ll-hero">
+            <div class="ll-hero-copy">
+              <div class="ll-eyebrow"><span></span>LABORATORIUM IDE BISNIS</div>
+              <h1>Ide bagus.<br>Buktikan<br><em>pasarnya.</em></h1>
+              <p>Uji minat pembeli, bandingkan vendor, dan hitung modal sebelum produksi pertamamu.</p>
+              <div class="ll-actions"><button type="button" class="ll-primary cursor-interaction" data-go="kampanye">Mulai eksperimen<i data-lucide="arrow-up-right" aria-hidden="true"></i></button><button type="button" class="ll-secondary cursor-interaction" data-go="dashboard">Jelajahi contoh</button></div>
+              <p class="ll-hero-foot">Dari “kayaknya laku” ke keputusan dengan bukti.</p>
+            </div>
+            <div class="ll-art" aria-label="Ilustrasi kampanye contoh tote bag, minat calon pembeli, dan kebutuhan modal">
+              <div class="ll-art-orbit"></div><div class="ll-orbit-ring"></div><span class="ll-art-label">EKSPERIMEN 001</span>
+              <div class="ll-art-scene">
+                <div class="ll-product-paper" data-depth=".6"><div class="ll-product-image"><i data-lucide="shopping-bag" aria-hidden="true"></i><span class="ll-bag-label">ruang<br>kota.</span></div><small>MERCHANDISE PERTAMA</small><strong>Tote bag Ruang Kota</strong><div class="ll-paper-price">Rp59.000 / unit</div></div>
+                <div class="ll-float-note ll-interest" data-depth="1.2"><span class="ll-note-icon"><i data-lucide="heart" aria-hidden="true"></i></span><div><small>Minat terkumpul</small><strong>24 calon pembeli</strong></div></div>
+                <div class="ll-float-note ll-cost" data-depth="1.8"><span class="ll-note-icon"><i data-lucide="calculator" aria-hidden="true"></i></span><div><small>Skenario 30 unit</small><strong>Modal Rp990.000</strong></div></div>
+                <div class="ll-check-stamp" data-depth="1.1"><i data-lucide="check" aria-hidden="true"></i></div>
+                <div class="ll-art-spark" data-depth="2"><i data-lucide="sparkles" aria-hidden="true"></i></div>
+              </div>
+            </div>
+          </div>
+          <section class="ll-steps"><div class="ll-section-tag">DARI IDE KE KEPUTUSAN</div><div class="ll-step-grid">
+            <div class="ll-step"><span class="ll-step-icon"><i data-lucide="mouse-pointer-2" aria-hidden="true"></i></span><div><h3>01 / Uji penawaran</h3><p>Bagikan idemu dan catat minat calon pembeli.</p></div></div>
+            <div class="ll-step"><span class="ll-step-icon"><i data-lucide="calculator" aria-hidden="true"></i></span><div><h3>02 / Hitung produksi</h3><p>Bandingkan biaya, MOQ, dan modal yang dibutuhkan.</p></div></div>
+            <div class="ll-step"><span class="ll-step-icon"><i data-lucide="scan-line" aria-hidden="true"></i></span><div><h3>03 / Lihat buktinya</h3><p>Pilih langkah berikutnya lewat hasil pengujian.</p></div></div>
+          </div></section>
+          <section class="ll-bottom-banner"><div><h2>Sebelum cetak banyak,<br>coba langkah kecil.</h2><p>Mulai dari kaos atau tote bag pertamamu.<br>Satu eksperimen untuk keputusan yang lebih jelas.</p></div><button type="button" class="ll-lime-button cursor-interaction" data-go="kampanye">Uji ide pertamamu<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></section>
+          <footer class="ll-footer"><span>LakuLab / Uji ide, rencanakan langkah.</span><span>Ilustrasi menggunakan data simulasi.</span></footer>
+        </section>
+        <section data-view="dashboard" class="ll-workspace" hidden aria-label="Dashboard contoh">
+          <div class="ll-page-heading"><div><div class="ll-page-overline">Ruang eksperimenmu</div><h2>Selangkah lebih jelas.</h2><p>Lihat perkembangan pengujian sebelum menentukan produksi.</p></div><button type="button" class="ll-primary cursor-interaction" data-go="kampanye"><i data-lucide="plus" aria-hidden="true"></i>Kampanye baru</button></div>
+          <div class="ll-data-note">Data contoh / Tote bag Ruang Kota. Minat dan konfirmasi belum merupakan penjualan.</div>
+          <div class="ll-stats"><div class="ll-stat"><small>Pengunjung</small><strong>60</strong><span>Halaman penawaran</span></div><div class="ll-stat"><small>Menyatakan minat</small><strong>24</strong><span>Reservasi gratis</span></div><div class="ll-stat"><small>Konfirmasi ulang</small><strong>16</strong><span>Masih berupa minat</span></div></div>
+          <h3 class="ll-block-title">Eksperimen yang sedang berjalan</h3><div class="ll-project"><div class="ll-project-image"><i data-lucide="shopping-bag" aria-hidden="true"></i></div><div><span class="ll-status">Pengujian konsep</span><h3>Tote bag Ruang Kota</h3><p>Harga uji Rp59.000 / unit</p><button type="button" class="ll-link cursor-interaction" data-go="pembeli">Lihat calon pembeli<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div><button type="button" class="ll-secondary cursor-interaction" data-go="simulasi">Simulasikan biaya</button></div>
+          <div class="ll-next-step"><h3>Langkah berikutnya</h3><p>Lengkapi penawaran vendor, lalu bandingkan beberapa skenario penjualan. Jumlah yang berminat belum menjamin jumlah terjual.</p></div>
+        </section>
+        <section data-view="kampanye" class="ll-workspace" hidden aria-label="Desain formulir kampanye">
+          <div class="ll-page-heading"><div><div class="ll-page-overline">Eksperimen baru</div><h2>Mulai dari satu pertanyaan.</h2><p>Susun penawaran dan tentukan apa yang ingin kamu uji.</p></div></div>
+          <form class="ll-form" id="ll-campaign-form"><div class="ll-form-grid">
+            <label class="ll-field ll-field-full">Nama produk<input id="ll-product" name="product" value="Tote bag Ruang Kota" required maxlength="70"></label>
+            <label class="ll-field">Kategori<select id="ll-category" name="category"><option value="tote">Tote bag</option><option value="kaos">Kaos</option><option value="hoodie">Hoodie / sweater</option><option value="topi">Topi</option><option value="tumbler">Tumbler</option><option value="mug">Mug</option><option value="stiker">Stiker</option><option value="notebook">Notebook</option><option value="custom">Produk kustom lainnya</option></select></label>
+            <label class="ll-field">Harga uji per unit (Rp)<input id="ll-campaign-price" name="price" type="number" min="1" value="59000" required></label>
+            <label class="ll-field ll-field-full" id="ll-custom-category-field" hidden>Nama kategori kustom<input id="ll-custom-category" name="customCategory" maxlength="60" placeholder="Misalnya pouch, pin, atau gantungan kunci" disabled></label>
+            <label class="ll-field ll-field-full">Calon pembeli yang dituju<input id="ll-audience" name="audience" value="Mahasiswa yang mencari tote bag untuk aktivitas kampus" maxlength="120" required></label>
+            <p class="ll-field-full ll-data-note" id="ll-product-hint" aria-live="polite">Nama, harga, dan sasaran pembeli hanya contoh yang bisa kamu edit. Harga bukan hasil riset pasar.</p>
+            <label class="ll-field">Durasi pengujian<select><option>7 hari</option><option>14 hari</option></select></label>
+            <label class="ll-field">Target minat awal<input type="number" min="1" value="20" required></label>
+          </div><div class="ll-form-foot"><p>Pengujian konsep dengan reservasi gratis.</p><button type="submit" class="ll-primary cursor-interaction">Lihat rancangan kampanye<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div><div class="ll-feedback" id="ll-form-feedback" aria-live="polite"></div></form>
+        </section>
+        <section data-view="pembeli" class="ll-workspace" hidden aria-label="Desain daftar calon pembeli">
+          <div class="ll-page-heading"><div><div class="ll-page-overline">Tote bag Ruang Kota</div><h2>Kenali minatnya.</h2><p>Pisahkan reservasi awal dari minat yang sudah dikonfirmasi ulang.</p></div></div><div class="ll-data-note">Data contoh untuk menampilkan desain. Identitas calon pembeli disamarkan.</div>
+          <table class="ll-table"><thead><tr><th>CALON PEMBELI</th><th>VARIAN</th><th>TAHAP MINAT</th></tr></thead><tbody><tr><td>Calon pembeli 01</td><td>Natural</td><td><span class="ll-status">Dikonfirmasi ulang</span></td></tr><tr><td>Calon pembeli 02</td><td>Natural</td><td><span class="ll-status">Dikonfirmasi ulang</span></td></tr><tr><td>Calon pembeli 03</td><td>Hitam</td><td>Menunggu respons</td></tr><tr><td>Calon pembeli 04</td><td>Natural</td><td>Reservasi awal</td></tr></tbody></table><div class="ll-next-step"><h3>Minat tetap perlu diuji</h3><p>Konfirmasi ulang membantu memahami keseriusan calon pembeli. Pembayaran dan penjualan memiliki tahap pencatatan tersendiri.</p></div>
+        </section>
+        <section data-view="simulasi" class="ll-workspace" hidden aria-label="Desain simulator produksi">
+          <div class="ll-page-heading"><div><div class="ll-page-overline">Vendor & simulasi</div><h2>Lihat konsekuensi angkanya.</h2><p>Bandingkan jumlah produksi dan skenario terjual sebelum mengeluarkan modal.</p></div></div><div class="ll-data-note">Data contoh. Asumsi seluruh biaya produksi dibayar sebelum penjualan, tanpa deposit pembeli.</div>
+          <div class="ll-sim-layout"><div class="ll-form"><h3 class="ll-block-title">Skenario tote bag</h3><div class="ll-form-grid"><label class="ll-field">Jumlah produksi<input id="ll-qty" type="number" min="1" max="10000" value="30"></label><label class="ll-field">Skenario terjual<input id="ll-sold" type="number" min="0" max="30" value="24"></label><label class="ll-field">Biaya per unit (Rp)<input id="ll-cost" type="number" min="0" value="28000"></label><label class="ll-field">Harga jual (Rp)<input id="ll-price" type="number" min="0" value="59000"></label><label class="ll-field ll-field-full">Biaya sampel & pengiriman (Rp)<input id="ll-fixed" type="number" min="0" value="150000"></label></div></div><div class="ll-sim-result"><h3>Kebutuhan modal produksi</h3><div class="ll-big-result" id="ll-capital">Rp990.000</div><div class="ll-result-row"><span>Stok tersisa</span><strong id="ll-stock">6 unit</strong></div><div class="ll-result-row"><span>Penerimaan skenario</span><strong id="ll-receipts">Rp1.416.000</strong></div><div class="ll-result-row"><span>Selisih penerimaan & biaya</span><strong id="ll-surplus">Rp426.000</strong></div><p class="ll-result-note">Sebelum pajak dan biaya lain yang belum dimasukkan. Skenario terjual bukan hasil reservasi.</p><div id="ll-sim-status" class="ll-result-note" aria-live="polite"></div></div></div>
+        </section>
+        <section data-view="laporan" class="ll-workspace" hidden aria-label="Desain laporan keputusan">
+          <div class="ll-page-heading"><div><div class="ll-page-overline">Laporan eksperimen</div><h2>Angka jadi bahan keputusan.</h2><p>Ringkasan bukti dan hal yang masih perlu kamu pastikan.</p></div></div><div class="ll-data-note">Contoh laporan / Tote bag Ruang Kota</div><div class="ll-report"><div class="ll-report-row"><span>01</span><div><h3>24 reservasi, 16 konfirmasi ulang</h3><p>Belum ada data transaksi. Tingkat minat perlu diuji kembali sebelum menetapkan jumlah produksi.</p></div></div><div class="ll-report-row"><span>02</span><div><h3>MOQ contoh vendor 30 unit</h3><p>Pada skenario 24 unit terjual, terdapat 6 unit stok tersisa. Biaya dihitung untuk seluruh 30 unit yang diproduksi.</p></div></div><div class="ll-report-row"><span>03</span><div><h3>Langkah yang bisa dipertimbangkan</h3><p>Konfirmasi ulang calon pembeli, cari penawaran MOQ lebih kecil, atau ulangi pengujian harga sebelum produksi.</p></div></div></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  
+  
+  
+</div>
+
+</body>
+</html>
