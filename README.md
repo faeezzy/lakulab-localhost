@@ -4,10 +4,9 @@ Prototipe frontend dengan desain ungu, lime, ivory, dan teks hijau tua yang suda
 
 ## Menjalankan
 
-1. Ekstrak ZIP terlebih dahulu.
-2. Buka terminal di folder `lakulab-localhost`.
-3. Jalankan `npm run dev` atau `node server.mjs`.
-4. Buka **http://localhost:3000** di browser.
+1. Buka terminal di folder `lakulab-localhost`.
+2. Jalankan `npm run dev` atau `node server.mjs`.
+3. Buka **http://localhost:3000** di browser.
 
 Tidak perlu `npm install`. Perintah di atas membutuhkan Node.js. Di Windows, kamu juga bisa klik dua kali `start.bat`, lalu buka alamat yang ditampilkan.
 
