@@ -1,25 +1,334 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LakuLab – Buktikan pasarnya sebelum produksi</title><meta name="description" content="LakuLab membantu menguji minat calon pembeli, membandingkan vendor, dan menghitung modal produksi pertama."><link rel="icon" href="assets/logo-lakulab.png"><link rel="stylesheet" href="assets/styles.css"></head><body>
-<div class="top"><button id="menu" aria-expanded="false" aria-controls="sb">Menu</button><img src="assets/logo-lakulab.png" alt="LakuLab"></div>
-<nav class="sb" id="sb" aria-label="Menu utama"><img src="assets/logo-lakulab.png" alt="LakuLab"><a href="#beranda" data-m="beranda">Beranda</a><a href="#dashboard" data-m="dashboard">Dashboard</a><a href="#kampanye" data-m="kampanye">Kampanye</a><a href="#pembeli" data-m="pembeli">Calon pembeli</a><a href="#vendor" data-m="vendor">Vendor &amp; simulasi</a><a href="#laporan" data-m="laporan">Laporan</a><a class="new" href="#kampanye">+ Eksperimen baru</a></nav>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LakuLab – Uji minat sebelum produksi pertama</title>
+<meta name="description" content="LakuLab mencatat minat calon pembeli, membandingkan penawaran vendor, dan menghitung modal serta titik impas sebelum produksi merchandise pertama.">
+<link rel="icon" href="assets/logo-lakulab.png">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="top">
+  <button id="menu" aria-expanded="false" aria-controls="sb"><i data-lucide="menu"></i><span>Menu</span></button>
+  <img src="assets/logo-lakulab.png" alt="LakuLab">
+</header>
+
+<nav class="sb" id="sb" aria-label="Menu utama">
+  <a class="logo" href="#beranda"><img src="assets/logo-lakulab.png" alt="LakuLab"></a>
+  <p class="grp">Eksperimen</p>
+  <a href="#dashboard" data-m="dashboard"><i data-lucide="layout-dashboard"></i>Ringkasan</a>
+  <a href="#kampanye" data-m="kampanye"><i data-lucide="file-pen-line"></i>Rancangan uji</a>
+  <a href="#pembeli" data-m="pembeli"><i data-lucide="users"></i>Calon pembeli</a>
+  <a href="#vendor" data-m="vendor"><i data-lucide="scale"></i>Vendor &amp; simulasi</a>
+  <a href="#laporan" data-m="laporan"><i data-lucide="file-text"></i>Laporan</a>
+  <p class="grp">LakuLab</p>
+  <a href="#beranda" data-m="beranda"><i data-lucide="flask-conical"></i>Halaman depan</a>
+  <a href="#paket" data-m="paket"><i data-lucide="ticket"></i>Paket &amp; harga</a>
+  <a href="#institusi" data-m="institusi"><i data-lucide="building-2"></i>Untuk institusi</a>
+  <div class="sb-now" id="sb-now"></div>
+  <p class="sb-note">Prototipe. Semua angka adalah data contoh, dan minat belum berarti penjualan.</p>
+</nav>
+
 <main>
-<section class="v" id="v-beranda"><div class="hero"><div class="hc"><span class="tag">Laboratorium ide bisnis</span><h1>Ide bagus.<br>Buktikan<br><em>pasarnya.</em></h1><p class="mu" style="font-size:16px;max-width:440px">Uji minat pembeli, bandingkan vendor, dan hitung modal sebelum produksi pertamamu.</p><div class="row"><a class="pu" href="#kampanye">Mulai eksperimen</a><a class="ol" href="#dashboard">Jelajahi contoh</a></div><p class="mu">Dari "kayaknya laku" ke keputusan dengan bukti.</p></div>
-<div class="art"><svg class="ring" viewBox="0 0 520 440" role="img" aria-label="Kartu tote bag dengan 24 calon pembeli dan modal Rp990.000"><g class="orbit" data-depth="0.3"><circle cx="270" cy="220" r="190" fill="none" stroke="#D9D4F4" stroke-dasharray="4 8"/></g><circle cx="270" cy="220" r="140" fill="#F1EEFC"/><g data-depth="1"><rect x="150" y="70" width="240" height="300" rx="26" fill="#fff" stroke="#E4E2DA"/><rect x="168" y="88" width="204" height="170" rx="18" fill="#D9EE7A"/><path d="M215 160h110l8 70h-126z" fill="none" stroke="#1F3A2E" stroke-width="6" stroke-linejoin="round"/><path d="M240 160c0-30 60-30 60 0" fill="none" stroke="#1F3A2E" stroke-width="6"/><text x="168" y="292" font-size="11" fill="#55645C">MERCHANDISE PERTAMA</text><text x="168" y="318" font-size="22" font-weight="800" fill="#1F3A2E" font-family="Manrope">Tote bag Ruang Kota</text><text x="168" y="344" font-size="14" fill="#5B3FD0">Rp59.000 / unit</text></g><g data-depth="2"><rect x="20" y="96" width="180" height="56" rx="14" fill="#fff" stroke="#E4E2DA"/><text x="64" y="118" font-size="11" fill="#55645C">Minat terkumpul</text><text x="64" y="140" font-size="16" font-weight="800" fill="#1F3A2E" font-family="Manrope">24 calon pembeli</text><circle cx="40" cy="124" r="10" fill="#EEEAFB"/></g><g data-depth="2.4"><rect x="300" y="340" width="210" height="62" rx="14" fill="#fff" stroke="#E4E2DA"/><rect x="314" y="354" width="34" height="34" rx="9" fill="#D9EE7A"/><text x="358" y="366" font-size="11" fill="#55645C">Skenario 30 unit</text><text x="358" y="388" font-size="16" font-weight="800" fill="#1F3A2E" font-family="Manrope">Modal Rp990.000</text></g><g data-depth="1.6"><circle cx="470" cy="190" r="22" fill="#5B3FD0"/><path d="M460 190l8 8 14-16" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/></g><g data-depth="3"><path d="M70 330l6 14 14 6-14 6-6 14-6-14-14-6 14-6z" fill="#fff" stroke="#5B3FD0" stroke-width="2"/></g></svg></div></div>
-<div class="row steps"><div class="c"><h3>1. Susun pengujian</h3><p class="mu">Tetapkan produk, harga, sasaran, dan kriteria sukses.</p></div><div class="c"><h3>2. Kumpulkan minat</h3><p class="mu">Bagikan halaman penawaran, catat reservasi gratis.</p></div><div class="c"><h3>3. Bandingkan vendor</h3><p class="mu">Masukkan MOQ, biaya, dan termin bayar.</p></div><div class="c"><h3>4. Simulasikan keputusan</h3><p class="mu">Lihat modal, titik impas, dan stok tersisa.</p></div></div>
-<p class="mu">Reservasi gratis dan konfirmasi minat adalah sinyal permintaan, bukan penjualan. Data awal di sini adalah contoh.</p></section>
+<!-- BERANDA -->
+<section class="v landing" id="v-beranda">
+  <header class="lnav">
+    <a href="#beranda" class="lnav-logo"><img src="assets/logo-lakulab.png" alt="LakuLab"></a>
+    <nav aria-label="Bagian halaman">
+      <button type="button" data-goto="l-cara">Cara kerja</button>
+      <button type="button" data-goto="l-coba">Coba hitung</button>
+      <button type="button" data-goto="l-paket">Paket</button>
+      <button type="button" data-goto="l-faq">Tanya jawab</button>
+    </nav>
+    <a class="btn pu" href="#dashboard">Buka aplikasi</a>
+  </header>
 
-<section class="v" id="v-dashboard"><div><h1>Ringkasan eksperimenmu</h1><p class="mu">Angka diambil dari data yang kamu isi. Minat bukan penjualan.</p></div><div class="row" id="kpi"></div><div class="row"><div class="c" style="flex:2"><h2>Eksperimen berjalan</h2><div class="l"><span id="d-name"></span><span class="chip" id="d-day"></span></div><div class="bar"><i id="d-bar"></i></div></div><div class="c"><h2>Langkah berikutnya</h2><p class="mu">1. Tambahkan vendor di tab Vendor.</p><p class="mu">2. Atur asumsi konversi minat.</p><p class="mu">3. Baca rekomendasi keputusan.</p><a class="pu" href="#simulasi" style="text-align:center">Buka simulator</a></div></div></section>
+  <div class="story" id="l-cara">
+    <div class="chap chap-hero" data-step="0">
+      <h1>Uji dulu minatnya, baru pesan ke vendor.</h1>
+      <p class="lead">Sebelum bayar DP untuk 30 tote bag, cek berapa orang yang benar-benar konfirmasi mau beli, dan berapa yang harus laku supaya modalmu balik.</p>
+      <div class="row">
+        <a class="btn lime" href="#kampanye">Mulai eksperimen</a>
+        <button class="btn ghost" type="button" data-goto="chap-1">Lihat caranya</button>
+      </div>
+      <p class="scroll-hint" aria-hidden="true"><span></span>Gulir untuk melihat satu eksperimen dari awal sampai keputusan</p>
+    </div>
 
-<section class="v" id="v-kampanye"><div><h1>Susun pengujian penawaran</h1><p class="mu">Isian tersimpan otomatis di browser ini.</p></div><div class="row" style="align-items:flex-start"><div class="c" style="flex:3;min-width:300px;gap:13px"><label>Nama produk<input data-k="camp.name"></label><div class="row"><label style="flex:1">Kategori<select data-k="camp.cat"><option>Tote bag</option><option>Kaos</option><option>Hoodie / sweater</option><option>Topi</option><option>Tumbler</option><option>Mug</option><option>Stiker</option><option>Notebook</option><option>Produk kustom</option></select></label><label style="flex:1">Harga uji per unit (Rp)<input type="number" min="0" data-k="camp.price"></label></div><label>Calon pembeli yang dituju<input data-k="camp.target"></label><div class="row"><label style="flex:1">Durasi<select data-k="camp.days"><option value="7">7 hari</option><option value="14">14 hari</option></select></label><label style="flex:1">Target minat awal<input type="number" min="1" data-k="camp.goal"></label></div><label>Kriteria sukses: konfirmasi ulang minimal<input type="number" min="1" data-k="camp.crit"></label><div class="row"><button class="pu" id="save">Simpan rancangan</button><button class="ol" id="reset">Reset ke contoh</button></div></div>
-<div class="c" style="flex:2;background:#F1EEFC;align-items:center;text-align:center;min-width:260px"><p class="mu">Pratinjau halaman penawaran</p><svg viewBox="0 0 240 150" width="240" aria-hidden="true"><rect width="240" height="150" rx="16" fill="#D9EE7A"/><path d="M85 60h70l6 50H79z" fill="none" stroke="#1F3A2E" stroke-width="5" stroke-linejoin="round"/></svg><h3 id="p-name"></h3><p class="ok" style="color:#5B3FD0" id="p-price"></p><p class="mu" id="p-target"></p><button class="pu" type="button" id="p-res">Reservasi gratis</button><p class="mu" id="p-msg">Reservasi gratis bukan pembelian.</p></div></div></section>
+    <div class="stage" aria-hidden="true">
+      <div class="stage-in">
+        <div class="world">
+          <div class="plane" id="plane"></div>
+          <div class="c3 c-ticket" data-show="0" data-z="90" style="left:6%;top:16%"><span class="dot"></span><div><small>Reservasi baru</small><b>Calon pembeli 24</b></div></div>
+          <div class="c3 c-mini" data-show="0" data-z="140" style="right:4%;top:30%"><small>Vendor C, 30 unit</small><b>Rp875.000</b></div>
+          <div class="c3 c-mini" data-show="0" data-z="60" style="left:12%;bottom:14%"><small>Titik impas</small><b>17 unit</b></div>
 
-<section class="v" id="v-pembeli"><div><h1>Kenali minatnya</h1><p class="mu">Ubah angka funnel sesuai hasil kampanyemu. Ini sinyal permintaan, bukan penjualan.</p></div><div class="row"><div class="c"><label>Kunjungan<input type="number" min="0" data-k="f.visit"></label></div><div class="c"><label>Reservasi gratis<input type="number" min="0" data-k="f.res"></label></div><div class="c"><label>Konfirmasi ulang<input type="number" min="0" data-k="f.conf"></label></div><div class="c"><label>Batal<input type="number" min="0" data-k="f.cancel"></label></div></div><div class="c"><p class="mu" id="f-rate"></p><table><tr><th>Calon pembeli</th><th>Varian</th><th>Tahap minat</th></tr><tr><td>Calon pembeli 01</td><td>Hitam</td><td><span class="chip">Konfirmasi ulang</span></td></tr><tr><td>Calon pembeli 02</td><td>Krem</td><td><span class="chip">Reservasi</span></td></tr><tr><td>Calon pembeli 03</td><td>Hitam</td><td><span class="chip" style="background:#FADBD8;color:#A8201A">Batal</span></td></tr></table><p class="mu">Contoh daftar. Integrasi data nyata belum tersedia di versi localhost.</p></div></section>
+          <div class="c3 c-card" data-show="1" data-z="120" style="left:8%;top:10%">
+            <svg viewBox="0 0 120 70"><rect width="120" height="70" rx="6" fill="#E6F3A8"/><path d="M44 26h32l3 30H41z" fill="none" stroke="#17271F" stroke-width="2.6" stroke-linejoin="round"/><path d="M52 26c0-13 16-13 16 0" fill="none" stroke="#17271F" stroke-width="2.6"/></svg>
+            <b>Tote bag Ruang Kota</b>
+            <div class="kv"><span>Harga uji</span><b>Rp59.000</b></div>
+            <div class="kv"><span>Rencana produksi</span><b>30 unit</b></div>
+            <div class="kv"><span>Kriteria sukses</span><b>20 konfirmasi</b></div>
+          </div>
 
-<section class="v" id="v-vendor"><div><h1>Bandingkan vendor</h1><p class="mu">Isi penawaran vendor pilihanmu. Semua angka awal adalah contoh.</p></div><div class="tabs"></div><div class="row"><label style="max-width:240px">Jumlah produksi yang direncanakan<input type="number" min="1" data-k="sim.qty"></label></div><div class="row" id="vcards"></div><div id="vwarn"></div></section>
+          <div class="c3 c-card c-funnel" data-show="2" data-z="130" style="right:4%;top:8%">
+            <b>Minat 14 hari</b>
+            <div class="kv"><span>Kunjungan</span><b data-count="180">180</b></div>
+            <div class="kv"><span>Reservasi gratis</span><b data-count="24">24</b></div>
+            <div class="kv hi"><span>Konfirmasi ulang</span><b data-count="16">16</b></div>
+            <small>Tiap kubus satu unit. Hijau tua sudah konfirmasi ulang.</small>
+          </div>
 
-<section class="v" id="v-simulasi"><div><h1>Tiga skenario, satu keputusan</h1><p class="mu" id="s-sub"></p></div><div class="tabs"></div><div class="row"><label style="max-width:260px">Vendor dipakai<select id="vsel" data-k="sim.vendor"></select></label><label style="max-width:200px">Harga jual (Rp)<input type="number" min="0" data-k="sim.price"></label><label style="max-width:240px">Asumsi konversi minat ke beli (%)<input type="number" min="0" max="100" data-k="sim.conv"></label></div><div class="row" id="scen"></div><div class="row" id="sstat"></div></section>
+          <div class="c3 c-vendor" data-show="3" data-z="170" style="left:2%;top:12%"><small>Vendor A · dipilih</small><b>Rp955.000</b><span>MOQ 30 · DP 50%</span></div>
+          <div class="c3 c-vendor" data-show="3" data-z="120" style="left:36%;top:4%"><small>Vendor B</small><b>Rp1.395.000</b><span>MOQ 50 · DP 100%</span><em class="warn-t">MOQ di atas minat</em></div>
+          <div class="c3 c-vendor best" data-show="3" data-z="200" style="right:2%;top:16%"><small>Vendor C</small><b>Rp875.000</b><span>MOQ 20 · DP 30%</span><em>Modal terendah</em></div>
 
-<section class="v" id="v-keputusan"><div><h1>Dasar keputusan produksi pertama</h1><p class="mu">Aturan sederhana dan terbuka, bukan prediksi penjualan.</p></div><div class="tabs"></div><div class="row"><div class="c" id="k-f"></div><div class="c" id="k-c"></div></div><div class="dec" id="dec"></div></section>
+          <div class="c3 c-card c-verdict" data-show="4" data-z="160" style="right:3%;top:6%">
+            <span class="stamp sesuaikan">Sesuaikan</span>
+            <b>16 konfirmasi, titik impas 17</b>
+            <p>Kurang satu unit. Saran LakuLab: Vendor C, produksi 20 unit, titik impas 11.</p>
+          </div>
+          <div class="c3 c-gap" data-show="4" data-z="70" style="left:8%;bottom:12%">Unit ke-17 belum ada pembelinya. 13 unit lainnya berisiko jadi stok sisa.</div>
+        </div>
+      </div>
+      <ol class="rail" id="rail"><li>Susun</li><li>Minat</li><li>Vendor</li><li>Putuskan</li></ol>
+    </div>
 
-<section class="v" id="v-laporan"><div><h1>Angka jadi bahan keputusan</h1></div><div class="row" style="align-items:flex-start"><div class="c" style="flex:3;min-width:300px" id="rep"></div><div class="c noprint" style="flex:1"><h2>Ekspor</h2><button class="pu" id="print">Cetak / PDF</button><button class="ol" id="copy">Salin sebagai teks</button></div></div></section>
-</main><div id="toast" role="status" aria-live="polite"></div>
-<script src="assets/vendor/gsap.min.js"></script><script src="assets/vendor/ScrollTrigger.min.js"></script><script src="assets/app.js"></script></body></html>
+    <div class="chap" data-step="1" id="chap-1">
+      <p class="n">Langkah 1 dari 4</p>
+      <h2>Tulis dulu apa yang mau diuji</h2>
+      <p>Produk, harga uji, siapa calon pembelinya, berapa hari kampanye berjalan, dan berapa konfirmasi yang kamu anggap cukup. Kriterianya ditetapkan sebelum kampanye, jadi kamu tidak menggeser target setelah melihat hasil.</p>
+      <p class="mu2">Di contoh ini: tote bag Rp59.000, rencana 30 unit, sukses kalau 20 orang konfirmasi ulang.</p>
+    </div>
+    <div class="chap" data-step="2">
+      <p class="n">Langkah 2 dari 4</p>
+      <h2>Kumpulkan minat, pisahkan tingkatannya</h2>
+      <p>Bagikan halaman penawaran. Orang bisa reservasi gratis, lalu kamu minta konfirmasi ulang menjelang produksi. LakuLab memisahkan kunjungan, reservasi, konfirmasi, dan batal supaya klik iseng tidak terhitung sebagai pembeli.</p>
+      <p class="mu2">180 orang mampir, 24 reservasi, 16 konfirmasi ulang. Konfirmasi adalah sinyal paling kuat, tapi tetap belum penjualan.</p>
+    </div>
+    <div class="chap" data-step="3">
+      <p class="n">Langkah 3 dari 4</p>
+      <h2>Bandingkan penawaran vendor</h2>
+      <p>Masukkan MOQ, harga per unit, biaya sampel, setup sablon, ongkir, dan DP dari vendor pilihanmu. LakuLab menghitung total modal tiap vendor dan menandai yang paling murah. Kalau MOQ lebih besar dari jumlah konfirmasi, kamu diberi peringatan.</p>
+      <p class="mu2">Vendor B paling murah per unit, tapi MOQ-nya 50. Total modalnya justru paling besar.</p>
+    </div>
+    <div class="chap" data-step="4">
+      <p class="n">Langkah 4 dari 4</p>
+      <h2>Lihat keputusannya, lengkap dengan alasannya</h2>
+      <p>Konfirmasi ulang dibandingkan dengan titik impas dan kriteria sukses. Hasilnya Lanjut, Sesuaikan, atau Tunda, plus saran vendor dan jumlah produksi yang lebih aman. Laporannya bisa dicetak untuk sesi mentoring.</p>
+      <div class="row"><a class="btn lime" href="#kampanye">Coba dengan produkmu</a></div>
+    </div>
+  </div>
+
+  <section class="lsec" id="l-coba">
+    <div class="lsec-h"><h2>Coba hitung sendiri</h2><p class="mu">Geser angkanya. Aturan keputusannya sama dengan yang dipakai di aplikasi.</p></div>
+    <div class="try">
+      <div class="try-in">
+        <label>Konfirmasi ulang <output id="t-conf-o"></output><input type="range" id="t-conf" min="0" max="40" value="16"></label>
+        <label>Harga jual <output id="t-price-o"></output><input type="range" id="t-price" min="39000" max="89000" step="1000" value="59000"></label>
+        <label>Rencana produksi <output id="t-qty-o"></output><input type="range" id="t-qty" min="10" max="60" value="30"></label>
+        <fieldset class="seg"><legend>Vendor</legend>
+          <label><input type="radio" name="t-v" value="0" checked><span>A</span></label>
+          <label><input type="radio" name="t-v" value="1"><span>B</span></label>
+          <label><input type="radio" name="t-v" value="2"><span>C</span></label>
+        </fieldset>
+        <p class="mu sm" id="t-vinfo"></p>
+      </div>
+      <div class="try-out">
+        <div class="try-top"><div><p class="mu sm">Hasil</p><h3 id="t-head"></h3></div><span class="stamp" id="t-stamp"></span></div>
+        <div class="units" id="t-units" aria-hidden="true"></div>
+        <p class="legend"><span class="sw a"></span>Sudah konfirmasi<span class="sw b"></span>Perlu laku untuk impas<span class="sw c"></span>Sisa produksi</p>
+        <div class="try-kv"><div><span>Modal</span><b id="t-modal"></b></div><div><span>Titik impas</span><b id="t-be"></b></div><div><span>DP di muka</span><b id="t-dp"></b></div></div>
+        <p id="t-body"></p>
+        <p class="mu sm">Kriteria sukses contoh ini 20 konfirmasi ulang.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lsec">
+    <div class="lsec-h"><h2>Kenapa tidak pakai formulir dan spreadsheet saja?</h2><p class="mu">Bisa, dan gratis. Bedanya ada di berapa banyak yang harus kamu rangkai sendiri.</p></div>
+    <div class="tw vs"><table>
+      <thead><tr><th></th><th>Formulir + spreadsheet</th><th>LakuLab</th></tr></thead>
+      <tbody>
+        <tr><td>Mencatat minat</td><td>Semua respons masuk satu kolom. Kamu memilah sendiri.</td><td>Kunjungan, reservasi, konfirmasi ulang, dan batal dicatat terpisah.</td></tr>
+        <tr><td>Membandingkan vendor</td><td>Tabel dan rumus dibuat dari nol.</td><td>MOQ, sampel, setup, ongkir, dan DP dalam satu tabel.</td></tr>
+        <tr><td>Modal dan titik impas</td><td>Dihitung ulang manual tiap ganti vendor atau harga.</td><td>Berubah otomatis saat angka diubah.</td></tr>
+        <tr><td>Keputusan produksi</td><td>Kamu tafsirkan sendiri.</td><td>Lanjut, Sesuaikan, atau Tunda dari aturan yang bisa dibaca.</td></tr>
+        <tr><td>Laporan ke mentor</td><td>Disusun manual.</td><td>Cetak atau salin dari satu halaman.</td></tr>
+      </tbody></table></div>
+  </section>
+
+  <section class="lsec" id="l-paket">
+    <div class="lsec-h"><h2>Paket</h2><p class="mu">Harga awal yang masih kami uji bersama calon pengguna.</p></div>
+    <div class="plans">
+      <div class="plan"><p class="eyebrow">Individu</p><p class="amt">Rp49.000<span>per kampanye</span></p><p class="mu">Satu produk, akses 30 hari, semua fitur pengujian dan ekspor laporan.</p><a class="btn pu" href="#kampanye">Mulai dengan data contoh</a></div>
+      <div class="plan"><p class="eyebrow">Institusi</p><p class="amt">Rp1.500.000<span>per program</span></p><p class="mu">25 tim, akses 3 bulan, onboarding pengelola dan mentor, serta rekap laporan semua tim.</p><a class="btn ol" href="#institusi">Lihat tampilan mentor</a></div>
+    </div>
+  </section>
+
+  <section class="lsec" id="l-faq">
+    <div class="lsec-h"><h2>Tanya jawab</h2></div>
+    <div class="faq">
+      <details><summary>Reservasi gratis itu sama dengan penjualan?</summary><p>Tidak. Reservasi gratis menunjukkan orang tertarik, tapi belum ada uang yang berpindah. Karena itu LakuLab meminta konfirmasi ulang menjelang produksi dan memakai angka konfirmasi itu untuk keputusan. Komitmennya tetap lebih lemah daripada deposit.</p></details>
+      <details><summary>Apakah LakuLab yang memproduksi atau menjual barangnya?</summary><p>Tidak. Kamu tetap membawa audiens dan vendor pilihanmu sendiri. LakuLab membantu menguji minat dan menghitung modal sebelum kamu memesan produksi.</p></details>
+      <details><summary>Produk apa saja yang bisa diuji?</summary><p>Fokus awalnya merchandise kustom seperti kaos dan tote bag. Kategori lain seperti topi, mug, atau stiker bisa dicoba karena biayanya juga berbentuk MOQ, harga per unit, dan biaya setup.</p></details>
+      <details><summary>Angka vendornya dari mana?</summary><p>Dari penawaran vendor yang kamu hubungi sendiri. Semua angka di prototipe ini adalah contoh.</p></details>
+      <details><summary>Data calon pembeli dipakai untuk apa?</summary><p>Hanya untuk pemilik kampanye menghubungi calon pembeli soal pesanan itu, dan hanya kalau calon pembeli mencentang persetujuan di halaman penawaran.</p></details>
+      <details><summary>Apa bedanya paket individu dan institusi?</summary><p>Paket individu untuk satu kampanye. Paket institusi untuk inkubator atau program kampus: mentor bisa melihat kemajuan dan keputusan semua tim di satu tempat.</p></details>
+    </div>
+  </section>
+
+  <section class="lend">
+    <h2>Punya ide merchandise? Uji minggu ini.</h2>
+    <p>Mulai dari data contoh, lalu ganti dengan produkmu sendiri. Semua isian tersimpan di browser ini.</p>
+    <a class="btn lime" href="#kampanye">Mulai eksperimen</a>
+  </section>
+  <footer class="lfoot"><img src="assets/logo-lakulab.png" alt="LakuLab"><p class="mu sm">Prototipe. Semua angka di halaman ini adalah data contoh.</p></footer>
+</section>
+
+<!-- DASHBOARD -->
+<section class="v" id="v-dashboard">
+  <div class="ph"><h1>Ringkasan eksperimen</h1><p class="mu" id="d-sub"></p></div>
+  <div class="kpis" id="kpi"></div>
+  <div class="grid2">
+    <div class="panel">
+      <h2>Konfirmasi ulang dibanding target</h2>
+      <div class="meter" id="d-meter"></div>
+      <p class="mu" id="d-meter-n"></p>
+    </div>
+    <div class="panel">
+      <h2>Tahapan</h2>
+      <ol class="checks" id="d-steps"></ol>
+    </div>
+  </div>
+</section>
+
+<!-- KAMPANYE -->
+<section class="v" id="v-kampanye">
+  <div class="ph"><h1>Rancangan uji penawaran</h1><p class="mu">Tersimpan otomatis di browser ini.</p></div>
+  <div class="grid2 wide">
+    <form class="panel form" onsubmit="return false">
+      <label>Nama produk<input data-k="camp.name"></label>
+      <div class="row2">
+        <label>Kategori<select data-k="camp.cat"><option>Tote bag</option><option>Kaos</option><option>Hoodie / sweater</option><option>Topi</option><option>Tumbler</option><option>Mug</option><option>Stiker</option><option>Notebook</option><option>Produk kustom</option></select></label>
+        <label>Harga uji per unit<span class="ip"><em>Rp</em><input type="number" inputmode="numeric" min="0" step="500" data-k="camp.price"></span><small data-echo="camp.price"></small></label>
+      </div>
+      <label>Calon pembeli yang dituju<input data-k="camp.target"></label>
+      <div class="row2">
+        <label>Durasi pengujian<select data-k="camp.days"><option value="7">7 hari</option><option value="14">14 hari</option></select></label>
+        <label>Target reservasi<input type="number" inputmode="numeric" min="1" data-k="camp.goal"></label>
+      </div>
+      <label>Kriteria sukses<span class="ip"><input type="number" inputmode="numeric" min="1" data-k="camp.crit"><em>konfirmasi ulang</em></span><small>Tentukan sebelum kampanye berjalan supaya tidak menggeser target setelah melihat hasil.</small></label>
+      <div class="row"><button class="btn pu" id="save" type="button">Simpan rancangan</button><button class="btn ol" id="reset" type="button">Kembalikan data contoh</button></div>
+    </form>
+    <div class="offer">
+      <p class="eyebrow">Pratinjau halaman penawaran</p>
+      <div class="offer-card">
+        <svg viewBox="0 0 240 130" aria-hidden="true"><rect width="240" height="130" rx="8" fill="#E6F3A8"/><path d="M88 52h64l6 52H82z" fill="none" stroke="#17271F" stroke-width="4" stroke-linejoin="round"/><path d="M104 52c0-24 32-24 32 0" fill="none" stroke="#17271F" stroke-width="4"/></svg>
+        <h3 id="p-name"></h3>
+        <p class="price" id="p-price"></p>
+        <p class="mu" id="p-target"></p>
+        <label class="cb"><input type="checkbox" id="p-ok"> Saya setuju data saya dipakai pemilik produk untuk menghubungi saya soal pesanan ini.</label>
+        <button class="btn pu" type="button" id="p-res" disabled>Reservasi gratis</button>
+        <p class="mu sm" id="p-msg">Reservasi gratis bukan pembelian. Kamu akan diminta konfirmasi ulang sebelum produksi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEMBELI -->
+<section class="v" id="v-pembeli">
+  <div class="ph"><h1>Calon pembeli</h1><p class="mu">Isi angka dari kampanyemu. Konfirmasi ulang adalah sinyal terkuat, tapi tetap belum berarti penjualan.</p></div>
+  <div class="fin" id="f-inputs">
+    <label>Kunjungan halaman<input type="number" inputmode="numeric" min="0" data-k="f.visit"></label>
+    <label>Reservasi gratis<input type="number" inputmode="numeric" min="0" data-k="f.res"></label>
+    <label>Konfirmasi ulang<input type="number" inputmode="numeric" min="0" data-k="f.conf"></label>
+    <label>Batal<input type="number" inputmode="numeric" min="0" data-k="f.cancel"></label>
+  </div>
+  <div class="panel"><h2>Funnel minat</h2><div class="funnel big" id="f-funnel"></div></div>
+  <div class="panel">
+    <h2>Daftar calon pembeli</h2>
+    <div class="tw"><table><thead><tr><th>Nama</th><th>Varian</th><th>Tahap</th><th>Diperbarui</th></tr></thead><tbody>
+      <tr><td>Calon pembeli 01</td><td>Hitam</td><td><span class="chip ok">Konfirmasi ulang</span></td><td class="mu">Hari ke-6</td></tr>
+      <tr><td>Calon pembeli 02</td><td>Krem</td><td><span class="chip">Reservasi</span></td><td class="mu">Hari ke-4</td></tr>
+      <tr><td>Calon pembeli 03</td><td>Hitam</td><td><span class="chip bad">Batal</span></td><td class="mu">Hari ke-3</td></tr>
+    </tbody></table></div>
+    <p class="mu sm">Tiga baris contoh. Daftar asli akan terisi dari halaman penawaran setelah ada backend.</p>
+  </div>
+</section>
+
+<!-- VENDOR -->
+<section class="v" id="v-vendor">
+  <div class="ph"><h1>Bandingkan vendor</h1><p class="mu">Masukkan penawaran dari vendor pilihanmu. Modal dihitung dengan MOQ sebagai jumlah minimum.</p></div>
+  <label class="inline">Rencana produksi<span class="ip"><input type="number" inputmode="numeric" min="1" data-k="sim.qty"><em>unit</em></span></label>
+  <div class="tw panel flush"><table class="vt" id="vtable"></table></div>
+  <div id="vwarn"></div>
+</section>
+
+<!-- SIMULASI -->
+<section class="v" id="v-simulasi">
+  <div class="ph"><h1>Simulasi tiga skenario</h1><p class="mu" id="s-sub"></p></div>
+  <div class="fin">
+    <label>Vendor dipakai<select id="vsel" data-k="sim.vendor"></select></label>
+    <label>Harga jual<span class="ip"><em>Rp</em><input type="number" inputmode="numeric" min="0" step="500" data-k="sim.price"></span><small data-echo="sim.price"></small></label>
+    <label>Konversi konfirmasi ke beli<span class="ip"><input type="number" inputmode="numeric" min="0" max="100" data-k="sim.conv"><em>%</em></span></label>
+  </div>
+  <div class="scen" id="scen"></div>
+  <div class="kpis" id="sstat"></div>
+</section>
+
+<!-- KEPUTUSAN -->
+<section class="v" id="v-keputusan">
+  <div class="ph"><h1>Keputusan produksi pertama</h1><p class="mu">Aturannya terbuka: konfirmasi ulang dibandingkan dengan kriteria sukses dan titik impas. Ini bukan prediksi penjualan.</p></div>
+  <div class="verdict" id="dec"></div>
+  <div class="grid2">
+    <div class="panel"><h2>Pemeriksaan</h2><ul class="checks" id="k-checks"></ul></div>
+    <div class="panel"><h2>Angka yang dipakai</h2><div id="k-c"></div></div>
+  </div>
+</section>
+
+<!-- LAPORAN -->
+<section class="v" id="v-laporan">
+  <div class="ph row between"><div><h1>Laporan eksperimen</h1><p class="mu">Bisa dibawa ke sesi mentoring.</p></div><div class="row noprint"><button class="btn ol" id="copy" type="button">Salin teks</button><button class="btn pu" id="print" type="button">Cetak / PDF</button></div></div>
+  <article class="sheet" id="rep"></article>
+</section>
+
+<!-- PAKET -->
+<section class="v" id="v-paket">
+  <div class="ph"><h1>Paket &amp; harga</h1><p class="mu">Harga awal yang sedang diuji lewat wawancara dan uji coba pengguna.</p></div>
+  <div class="plans">
+    <div class="plan">
+      <p class="eyebrow">Individu</p>
+      <p class="amt">Rp49.000<span>/ kampanye</span></p>
+      <p class="mu">Untuk mahasiswa dan pengusaha muda yang mau menguji satu produk.</p>
+      <ul><li>Akses 30 hari untuk 1 kampanye</li><li>Halaman penawaran dan pencatatan minat</li><li>Perbandingan hingga 4 vendor</li><li>Simulasi 3 skenario dan dasar keputusan</li><li>Ekspor laporan</li></ul>
+      <a class="btn pu" href="#kampanye">Coba dengan data contoh</a>
+    </div>
+    <div class="plan">
+      <p class="eyebrow">Institusi</p>
+      <p class="amt">Rp1.500.000<span>/ program</span></p>
+      <p class="mu">Untuk inkubator dan program kewirausahaan kampus.</p>
+      <ul><li>25 tim, masing-masing 1 kampanye</li><li>Akses 3 bulan</li><li>Onboarding untuk pengelola dan mentor</li><li>Rekap laporan semua tim</li></ul>
+      <a class="btn ol" href="#institusi">Lihat tampilan mentor</a>
+    </div>
+  </div>
+  <div class="panel"><h2>Layanan tambahan untuk institusi</h2><p class="mu">Penyiapan program, pelatihan penggunaan, dan penyesuaian template laporan. Harganya dibahas saat demo.</p></div>
+  <p class="mu sm">Pembayaran belum tersedia di prototipe ini.</p>
+</section>
+
+<!-- INSTITUSI -->
+<section class="v" id="v-institusi">
+  <div class="ph"><h1>Tampilan mentor</h1><p class="mu">Contoh rekap untuk paket institusi. Nama tim dan angka di bawah fiktif.</p></div>
+  <div class="kpis" id="i-kpi"></div>
+  <div class="panel flush"><div class="tw"><table id="i-table"></table></div></div>
+</section>
+</main>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="assets/vendor/lucide.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/landing.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
